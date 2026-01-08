@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce</title>
+</head>
+<body style="background:black; color:lime;">
+
+<h1>Products</h1>
+
+{% for product in products %}
+    <div style="border:1px solid lime; padding:10px; margin:10px;">
+        <h2>
+  <a href="/product/{{ product.id }}/" style="color:lime;">
+      {{ product.name }}
+  </a>
+</h2>
+        <p>₹ {{ product.price }}</p>
+        <p>{{ product.description }}</p>
+    </div>
+{% endfor %}
+
+</body>
+</html>

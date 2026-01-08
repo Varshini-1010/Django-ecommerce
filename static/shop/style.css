@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    background: #0a0a0a;
+    color: #ccff00;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background: black;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ccff00;
+}
+
+.logo span {
+    color: #ccff00;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background: #111;
+    border: 1px solid #ccff00;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #ccff00;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}

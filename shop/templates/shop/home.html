@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce Store</title>
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+</head>
+<body>
+
+<header class="navbar">
+    <h1 class="logo">🛒 Shop<span>Zone</span></h1>
+</header>
+
+<div class="container">
+    {% for product in products %}
+    <div class="card">
+        <h2>{{ product.name }}</h2>
+        <p class="price">₹{{ product.price }}</p>
+        <a href="/product/{{ product.id }}/" class="btn">View</a>
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
