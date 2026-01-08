@@ -1,26 +1,76 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>E-Commerce Store</title>
+    <title>Varshini E-Shop 💻</title>
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="{% static 'shop/style.css' %}">
 </head>
+
 <body>
 
-<header class="navbar">
-    <h1 class="logo">🛒 Shop<span>Zone</span></h1>
-</header>
+<!-- 🔹 NAVBAR -->
+<nav class="navbar">
+    <div class="logo">💻 Varshini's E-Shop 💻</div>
 
-<div class="container">
+
+    <ul class="nav-links">
+        <li><a href="#">Home🏡|</a></li>
+        <li><a href="#">Products💻|</a></li>
+        <li><a href="#">Cart🛒|</a></li>
+        <li><a href="#">Login😊</a></li>
+    </ul>
+</nav>
+
+<!-- 🔹 HERO SECTION -->
+<section class="hero">
+    <h1>Welcome to Varshini's E-shop💻</h1>
+    <p> Powerful Shopping Experience.</p>
+    <button class="btn">Shop Now</button>
+</section>
+
+<!-- 🔹 PRODUCTS -->
+<section class="products">
+    <h2>Featured Products</h2>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <h3>Product One</h3>
+            <p>₹999</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <h3>Product Two</h3>
+            <p>₹1499</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <h3>Product Three</h3>
+            <p>₹1999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<!-- 🔹 FOOTER -->
+<footer>
+    <p>The Items in our Varshini's site</p>
+</footer>
+<div class="product-grid">
     {% for product in products %}
-    <div class="card">
-        <h2>{{ product.name }}</h2>
-        <p class="price">₹{{ product.price }}</p>
-        <a href="/product/{{ product.id }}/" class="btn">View</a>
+    <div class="product-card">
+        <h3>{{ product.name }}</h3>
+        <p>₹{{ product.price }}</p>
+        <button>Add to Cart</button>
     </div>
     {% endfor %}
 </div>
+
 
 </body>
 </html>

@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}MyShop{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<header class="navbar">
+    <h2>MyShop</h2>
+    <input type="text" placeholder="Search products...">
+    <nav>
+        <a href="/">Home</a>
+        <a href="/cart/">Cart</a>
+        <a href="/orders/">Orders</a>
+    </nav>
+</header>
+
+{% block content %}{% endblock %}
+
+<footer>
+    <p>© 2026 MyShop</p>
+</footer>
+
+</body>
+</html>
